@@ -2,9 +2,13 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    {% load  static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <title></title>
   </head>
   <body>
     <h1>Hello whats app</h1>
+    {% block title %}
+    {% endblock %}
   </body>
 </html>
