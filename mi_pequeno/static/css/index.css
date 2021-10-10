@@ -1,6 +1,35 @@
+<<<<<<< HEAD
 
 
 body{
   background-color: blue;
   color: white;
 }
+=======
+#navbar {
+    background-color: #049e969b !important;  
+}
+
+#navbar a{
+    color: whitesmoke !important;
+    font-weight: bold !important;
+    font-size: 18px;
+}
+
+#navbar a:hover{
+    color: rgba(49, 48, 48, 0.76) !important;
+}
+
+/* #navbar img{
+    width: 2.5vw;
+} */
+
+#carousel img{
+    width: 80% !important;
+    object-fit: cover;
+}
+
+h1 {
+    color: red;
+}
+>>>>>>> 162b5528a8b123035bd721be0042122cb62a3bd5
