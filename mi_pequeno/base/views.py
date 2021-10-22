@@ -7,17 +7,32 @@ def home(request):
     return render(request, "index.html")
 
 def quienes_somos(request):
-    return render(request, "main.html")
+    data = {
+        "titulo":"Quienes somos"
+        }
+    return render(request, "main.html", context=data)
 
 def que_hacemos(request):
-    return render(request, "main.html")
+    data = {
+        "titulo":"Qué hacemos"
+        }
+    return render(request, "main.html", context=data)
+
 
 def galeria(request):
     return render(request, "galeria.html")
 
 def contacto(request):
-    return render(request, "main.html")
+    data = {
+        "titulo":"Contacto"
+        }
+    return render(request, "main.html", context=data)
+
 
 def donacion(request):
-    return render(request, "main.html")
+    data = {
+        "titulo":"Donación"
+        }
+    return render(request, "main.html", context=data)
+
     
