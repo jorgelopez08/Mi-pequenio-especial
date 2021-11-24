@@ -125,21 +125,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
-]
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT =  BASE_DIR / 'media'
+STATIC_ROOT =  BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
 
-STATICFILES_FINDERS=[
+STATICFILES_DIRS =[os.path.join(BASE_DIR,"static")]
+
+STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
-
 
 #ckeditor
 
@@ -162,7 +159,7 @@ CKEDITOR_CONFIGS = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'mipquenoespecial@gmail.com'
-EMAIL_HOST_PASSWORD = os.getenv("MI_PEQUENO_EMAIL=") #past the key or password app here
+EMAIL_HOST_PASSWORD = os.getenv("MI_PEQUENO_EMAIL") #past the key or password app here
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'mipquenoespecial@gmail.com'
