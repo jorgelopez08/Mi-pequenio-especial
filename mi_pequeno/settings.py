@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uz(n!02q$7cba%r)v26d&x16l9(4k_&ntrc4)%=eh(eda=frz-'
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY_PEQUENO")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -162,7 +162,7 @@ CKEDITOR_CONFIGS = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'mipquenoespecial@gmail.com'
-EMAIL_HOST_PASSWORD = 'mipequeno123' #past the key or password app here
+EMAIL_HOST_PASSWORD = os.getenv("MI_PEQUENO_EMAIL=") #past the key or password app here
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'mipquenoespecial@gmail.com'
