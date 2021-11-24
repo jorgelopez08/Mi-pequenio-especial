@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}<title>Mi pequeño especial | Historia</title>{% endblock %}
+
+{% block content %}
+<section class="page-section about-heading">
+    <div class="container somos-cont">
+      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0 img-somos" src="{% static "img/somos.jpg" %}" alt="">
+      <div class="about-heading-content">
+        <div class="row">
+          <div class="col-xl-9 col-lg-10 ">
+            <div class="bg-faded rounded p-3">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-lower">Nuestra Guarderia</span>
+              </h2>
+              <!-- <p> </p> -->
+              <p>En la zona metropolitana de la ciudad de Guadalajara no existía ninguna guardería que trabaje en la atención de niños
+                y jóvenes con discapacidad , las que existen  reciben algunos niños entre las edades de 45 días de nacidos hasta los 3
+                años 11 meses años de edad y con ciertas restricciones o al terminar el preescolar y después de eso los padres de familia
+                (principalmente mamás solteras o abandonadas) se encuentran en la problemática de quién puede cuidar a su hijo (a) en
+                todos los aspectos desde cuestiones de integridad,  psicológicos, nutricionales, conductuales, etc.</p>
+              <p>Por tal motivo nace ESTA GUARDERIA, donde el personal que labora contamos con la experiencia en trabajar con ésta población
+                y conocemos todas sus necesidades tanto de él alumno,  como el de la familia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-9 col-lg-10 ">
+            <div class="bg-faded rounded p-3">
+              <h3 class="section-heading mb-4">
+                <span class="section-heading-lower">Tipos de discapacidad actualmente </span>
+              </h3>
+              <ul>
+                <li>Paralisis cerebral cuadriplejia</li>
+                <li>Paralisis cerebral hemiplejia</li>
+                <li>Paralisis cerebral pariplegia</li>
+                <li>Sindrome de down</li>
+                <li>Sindrome de down con rasgos autistas sin comunicación oral</li>
+                <li>Sindrome de landow kleffer</li>
+                <li>Sindrome de angelman</li>
+                <li>Autistas de leve a severo</li>
+                <li>Invidentes con deficiencia intelectual</li>
+                <li>Invidentes con rasgos autistas</li>
+                <li>Invidentes con sordera</li>
+                <li>Sindrome de wets</li>
+                <li>Microcefalia </li>
+                <li>Hidrocefalia</li>
+                <li>Epilepsia mioclonica infantil</li>
+                <li>Trastorno de deficit de atencion e hiperactividad.</li>
+                <li>Falta de cuerpo calloso</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

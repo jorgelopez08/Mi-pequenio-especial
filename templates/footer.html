@@ -1,0 +1,15 @@
+{% load static %}
+<footer class="">
+  <div class="general-info">
+    <p>Mi Pequeño Especial A.C</p>
+    {% load pages_extras %}
+      {% get_page_list as pages %}
+      {% for page in pages %}
+      <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{page.title}}</a>{% if not forloop.last %}-{% endif %}
+      {% endfor %}
+  </div>
+  <div id="social_networks">
+      <li><a href="https://www.facebook.com/Mi-Peque%C3%B1o-Especial-AC-110064060768370/?ref=page_internal" class="fa fa-facebook"></a></li>
+  </div>
+
+</footer>

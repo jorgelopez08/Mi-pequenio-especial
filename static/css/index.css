@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+body{
+  font-family: 'Lato', sans-serif !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap{
+  padding-bottom: 12vh;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .content-wrap{
+    padding-bottom: 50vh;
+  }
+
+
+}
+
+#navbar {
+    background-color: #049e969b !important;
+}
+
+
+
+/* NAVBAR STUFF */
+#navbar a{
+    color: whitesmoke !important;
+    font-weight: bold !important;
+    font-size: 18px;
+}
+
+#navbar a:hover{
+    color: rgba(49, 48, 48, 0.76) !important;
+}
+
+#navbar img{
+    width: 20%;
+}
+
+#carousel img{
+    width: 80% !important;
+    object-fit: cover;
+}
+
+
+
+.search_button{
+  background-color: white !important;
+  border-radius: 10px !important;
+}
+
+
+.search_button:hover{
+  background-color: #049e969b !important;
+  color: white !important;
+}
+
+
+.nav-item{
+  margin: 0px 5px !important;
+}
+
+/* NAVBAR STUFF ENDS */
+
+#carousel{
+  padding: 0px !important;
+}
+
+.carousel-item img{
+  object-fit: fill !important;
+  width: 100% !important;
+  height: 80vh;
+  margin: 0 auto !important;
+  background-color: #BBBEDA !important;
+}
+.carousel-item {
+  background-color: #BBBEDA !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .carousel-item img{
+    width: 100% !important;
+    object-fit: fill !important;
+    height: 50vh;
+    margin: 0px auto !important;
+  }
+  .carousel-item {
+    width: 100% !important;
+    padding: 0px !important;
+  }
+}
+
+
+.short_pres{
+  font-size: 25px;
+  height: 30vh;
+  display: flex;
+  justify-content:    center;
+  flex-direction: column;
+}
+.short_pres h1 {
+  color: #8794FF;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .short_pres{
+    font-size: 20px;
+    padding: 0px 5px;
+    height: 50vh;
+  }
+}
+
+
+/* #BEGINS PART OF MISION AND VISION */
+.mision-vision-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.m-v-item{
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.m-v-item p{
+  font-size: 20px;
+}
+
+.m-v-item figure{
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+.m-v-item figure img{
+  width: 10vw;
+  margin: 0px auto;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .mision-vision-container{
+    flex-direction: column !important;
+  }
+
+  .m-v-item{
+    width: 100%;
+
+  }
+
+  .m-v-item figure img{
+    width: 20vw;
+    margin: 0px auto;
+  }
+}
+
+/* SOMOS */
+.somos-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.img-somos{
+
+}
+
+
+/* BENEFICIOS  Y SERVICIOS  */
+
+/* BENEFICIOS DEL YOGA */
+.servicios{
+  text-align: center;
+}
+
+
+.benefits_cards{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+
+.benefit_cards_des{
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+.benefit_card_item img{
+  width: 10vw;
+  width: 15vh;
+}
+
+.benefit_card_center img{
+  width: 20vw;
+  height: 60vh;
+}
+
+.benefit_card_item{
+  /* border: 1px solid red; */
+}
+
+.benefit_card_item:nth-of-type(1){
+  grid-column: 1/ span 3;
+}
+
+.benefit_card_item:nth-of-type(5){
+  grid-row: 2 / span 3;
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .benefit_card_item{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .benefit_card_center img{
+    width: 80%;
+    height: inherit;
+    object-fit: contain;
+  }
+
+  .benefit_cards_des{
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: repeat(11, 1fr);
+    grid-gap: 10px;
+  }
+
+  .benefit_card_item:nth-of-type(1){
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .benefit_card_item:nth-of-type(5){
+    grid-row: 5;
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    height: 25vh;
+  }
+
+}
+
+/* OFRECEMOS */
+
+.ofrecemos{
+  background-image: linear-gradient(to right, rgba(92, 101, 171, 1.0), rgba(0, 0, 0, 0)), url('../img/photo_8.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  background-position: 50% 70%;
+  padding: 10px;
+  padding-left: 20px;
+  color: #FFFFFF;
+  padding-top: 20px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.ofrecemos button{
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  width: 10vw;
+}
+.ofrecemos button a {
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .ofrecemos{
+    font-size: 18px;
+    height: 100%;
+  }
+
+  .ofrecemos button{
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+  }
+
+}
