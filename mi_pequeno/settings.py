@@ -131,7 +131,7 @@ STATIC_ROOT =  BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS =[os.path.join(BASE_DIR,"static")]
+STATICFILES_DIRS =[BASE_DIR / 'static']
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -168,7 +168,7 @@ DEFAULT_FROM_EMAIL = 'mipquenoespecial@gmail.com'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 if os.getcwd() == '/app':
