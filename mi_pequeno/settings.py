@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
     'ckeditor',
     'base',
     'posts',
@@ -80,13 +81,29 @@ WSGI_APPLICATION = 'mi_pequeno.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'mipequeno',
+        # 'NAME': 'dbsatnam',
+        'USER': 'oscar',
+        # 'USER': 'root',
+        'PASSWORD':os.getenv("DB_PASS_MIPEQUENO"),
+        'HOST':  os.getenv("HOST_DB_MIPEQUENO"),
+        # 'PASSWORD': 'toor',
+        # 'HOST':  'localhost',
+        'PORT': '3306',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -169,6 +186,13 @@ DEFAULT_FROM_EMAIL = 'mipquenoespecial@gmail.com'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#DJANGO STORAGES
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID= os.getenv("AWS_ACCESS_KEY_ID_MIPEQUENO")
+AWS_SECRET_ACCESS_KEY=  os.getenv("AWS_SECRET_ACCESS_KEY_MIPEQUENO")
+AWS_STORAGE_BUCKET_NAME= 'mipequeno'
+AWS_QUERYSTRING_AUTH = False
 
 
 if os.getcwd() == '/app':
