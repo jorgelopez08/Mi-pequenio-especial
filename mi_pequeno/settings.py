@@ -195,7 +195,7 @@ AWS_SECRET_ACCESS_KEY=  os.getenv("AWS_SECRET_ACCESS_KEY_MIPEQUENO")
 AWS_STORAGE_BUCKET_NAME= 'mipequeno'
 AWS_QUERYSTRING_AUTH = False
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 if os.getcwd() == '/app':
