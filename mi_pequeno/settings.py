@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY_PEQUENO")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost',  'mi-pequeno-especial.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'mi-pequeno-especial.herokuapp.com',  '*']
 
 
 # Application definition
@@ -38,16 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'storages',
+
     'ckeditor',
     'base',
     'posts',
     'pages',
     'contact',
+    'storages',
 ]
 
 MIDDLEWARE = [
-
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -185,7 +185,7 @@ DEFAULT_FROM_EMAIL = 'mipquenoespecial@gmail.com'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 #DJANGO STORAGES
 
@@ -195,7 +195,7 @@ AWS_SECRET_ACCESS_KEY=  os.getenv("AWS_SECRET_ACCESS_KEY_MIPEQUENO")
 AWS_STORAGE_BUCKET_NAME= 'mipequeno'
 AWS_QUERYSTRING_AUTH = False
 
-
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 if os.getcwd() == '/app':
